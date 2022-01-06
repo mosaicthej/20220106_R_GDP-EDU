@@ -1,0 +1,18 @@
+set.seed(1)
+
+# Data simulation
+x <- runif(500)
+y <- 5 * x ^ 2 + rnorm(length(x), sd = 2)
+group <- ifelse(x < 0.4, "A",
+                ifelse(x > 0.8, "C", "B"))
+x <- x + runif(length(x), -0.2, 0.2)
+
+# Data frame
+df <- data.frame(x = x, y = y, group = group)
+
+# install.packages("ggplot2")
+library(ggplot2)
+
+# Scatter plot by group
+ggplot(df, aes(x = x, y = y, color = group)) +
+  geom_point()
