@@ -1,5 +1,5 @@
-logGDP = read_csv('GDP_Log_grouped.csv')
-logEdu = read_csv("eduExpense_Log_grouped.csv")
+logGDP = read.csv('GDP_Log_grouped.csv')
+logEdu = read.csv("eduExpense_Log_grouped.csv")
 
 # install.packages("ggplot2")
 library(ggplot2)
